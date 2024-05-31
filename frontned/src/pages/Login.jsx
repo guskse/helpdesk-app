@@ -43,7 +43,6 @@ const Login = () => {
     dispatch(reset());
   }, [isError, isSuccess, user, message, dispatch, navigate]);
 
-  
   //change the state when changing the values in the login form input fields
   const onChange = (e) => {
     setFormData((prevState) => ({
@@ -64,9 +63,8 @@ const Login = () => {
     dispatch(login(userData));
   };
 
-
-  if(isLoading){
-    return <Spinner />
+  if (isLoading) {
+    return <Spinner />;
   }
 
   return (

@@ -26,7 +26,9 @@ const Header = () => {
       <div className="logo">
         <Link to="/">Help Desk</Link>
       </div>
+
       <ul>
+        {user && <span>Hello, {user.name}</span>}
         {user ? (
           <li>
             <button className="btn" onClick={onLogout}>
